@@ -67,7 +67,7 @@ startQuiz = () => {
 getNextQuest = () => {
     if(availQuest.length === 0 || questCount > maxQuest) {
         localStorage.setItem('mostRecentScore', score)
-        return window.location.assign('/end.html')
+        return window.location.assign('end.html')
     }
 
     questCount++
@@ -103,12 +103,12 @@ options.forEach (option => {
 
         selectedOption.parentElement.classList.add(classToApply)
 
-        // setPause(() => {
-        //     selectedOption.parentElement.classList.remove(classToApply)
-        //     getNextQuest()
+    //     // setPause(() => {
+    //     //     selectedOption.parentElement.classList.remove(classToApply)
+            getNextQuest()
 
         }, 1000)
-    // })
+    // // })
 
 })
 
